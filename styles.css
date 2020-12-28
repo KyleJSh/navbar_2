@@ -1,0 +1,147 @@
+/*
+====================
+Variables
+====================
+*/
+
+:root {
+  /* dark shades of primary colour */
+  --clr-primary-1: hsl(135, 87%, 21%);
+  --clr-primary-2: hsl(135, 77%, 27%);
+  --clr-primary-3: hsl(135, 72%, 37%);
+  --clr-primary-4: hsl(135, 63%, 48%);
+  /* primary-main colour */
+  --clr-primary-5: hsl(135, 78%, 60%);
+  /* lighter shades of primary colour */
+  --clr-primary-6: hsl(135, 89%, 70%);
+  --clr-primary-7: hsl(135, 90%, 76%);
+  --clr-primary-8: hsl(135, 86%, 81%);
+  --clr-primary-9: hsl(135, 90%, 88%);
+  --clr-primary-10: hsl(135, 100%, 96%);
+  /* darkest grey - use in headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* light grey - use for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  /* Other */
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: rgb(0, 0, 0);
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*
+========================
+Global Styles
+========================
+*/
+
+*,
+::after,
+::before {
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: var(--ff-secondary);
+  background-color: var(--clr-white);
+  color: var(--clr-grey-6);
+}
+
+
+/* 
+================
+Nav Bar
+================
+*/
+
+nav {
+  display: grid;
+  grid-template-areas: 'logo menu social-media';
+  justify-content: space-evenly;
+  text-align: center;
+  background-image: radial-gradient(var(--clr-primary-1), var(--clr-primary-9));
+  box-shadow: var(--dark-shadow);
+}
+
+.logo {
+  grid: logo;
+  text-align: center;
+  margin: 1rem;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.logo img:hover {
+  transform: rotate(360deg);
+  transition: 0.8s ease-in-out;
+}
+
+.menu {
+  grid: menu;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 3px;
+  margin: auto;
+}
+
+li {
+  display: inline;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  padding: 0.875rem;
+}
+
+li:hover {
+  border-bottom: 1px solid var(--clr-grey-3);
+  transition: var(--transition);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-white);
+}
+
+li a {
+  color: var(--clr-white);
+}
+
+.social-media {
+  grid: social-media;
+  margin: auto;
+}
+
+
+i {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.social-media i:hover {
+  transform: scale(1.3);
+  transition: 0.3s ease-in-out;
+}

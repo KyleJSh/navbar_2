@@ -77,14 +77,16 @@ Nav Bar
 nav {
   display: grid;
   grid-template-areas: 'logo menu social-media';
-  justify-content: space-evenly;
   background-image: radial-gradient(var(--clr-primary-1), var(--clr-primary-9));
   box-shadow: var(--dark-shadow);
+  height: 12vh;
 }
 
 .logo {
   grid: logo;
   margin: 1rem;
+  padding: 10px
+  /* background-color: pink; */
 }
 
 .logo img {

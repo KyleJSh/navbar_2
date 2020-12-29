@@ -78,14 +78,12 @@ nav {
   display: grid;
   grid-template-areas: 'logo menu social-media';
   justify-content: space-evenly;
-  text-align: center;
   background-image: radial-gradient(var(--clr-primary-1), var(--clr-primary-9));
   box-shadow: var(--dark-shadow);
 }
 
 .logo {
   grid: logo;
-  text-align: center;
   margin: 1rem;
 }
 
@@ -100,9 +98,19 @@ nav {
 
 .menu {
   grid: menu;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   text-shadow: 1px 1px 3px;
   margin: auto;
+}
+
+.menu ul {
+  margin-left: 20px;
+  list-style-type: none;
+}
+
+.menu ul li a {
+  color: var(--clr-white);
+  text-decoration: none;
 }
 
 li {
@@ -117,31 +125,28 @@ li:hover {
   transition: var(--transition);
 }
 
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: var(--clr-white);
-}
-
-li a {
-  color: var(--clr-white);
-}
-
 .social-media {
   grid: social-media;
   margin: auto;
 }
 
-
 i {
-  padding: 10px;
-  font-size: 1.5rem;
+  padding: 2px;
+  font-size: 1.3rem;
+  color: var(--clr-black);
 }
 
 .social-media i:hover {
   transform: scale(1.3);
   transition: 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+  .menu ul li {
+    font-size: 1rem;
+    padding: 5px;
+  }
+  i {
+    font-size: 1rem;
+  }
 }
